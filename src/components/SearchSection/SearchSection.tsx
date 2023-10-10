@@ -17,7 +17,7 @@ export default function SearchSection(): JSX.Element {
     const value = e.target.value.trim();
     setTerm(value);
     if (value === "") return;
-    //test comment
+    //test comment 2
     getSearchOptions(value);
   };
   return (
