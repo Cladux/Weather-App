@@ -19,7 +19,7 @@ const SearchSection = ({
         Enter below a place you want to know the weather of and select an option
         from the dropdown
       </p>
-      <form className="relative flex mt-10 sm:mt-6">
+      <div className="relative flex mt-10 sm:mt-6">
         <input
           type="text"
           value={term}
@@ -44,7 +44,7 @@ const SearchSection = ({
         >
           Search
         </button>
-      </form>
+      </div>
     </section>
   );
 };

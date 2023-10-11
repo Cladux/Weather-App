@@ -2,7 +2,7 @@ import Forecast from "./components/Forecast/Forecast";
 import SearchSection from "./components/SearchSection/SearchSection";
 import useForecast from "./hooks/useForecast";
 
-export const App = () => {
+const App = () => {
   const { term, options, forecast, onInputChange, onOptionSelect, onSubmit } =
     useForecast();
   return (

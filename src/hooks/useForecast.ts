@@ -1,5 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { optionType, forecastType } from "../types";
+
 const useForecast = () => {
   const [term, setTerm] = useState<string>("");
   const [options, setOptions] = useState<[]>([]);
@@ -55,6 +56,7 @@ const useForecast = () => {
         setForecast(forecastData);
       });
   };
+
   return {
     term,
     options,
