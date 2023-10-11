@@ -1,3 +1,4 @@
+import Forecast from "./components/Forecast";
 import SearchSection from "./components/SearchSection";
 import useForecast from "./hooks/useForecast";
 
@@ -8,7 +9,7 @@ function App() {
     <>
       <main className="w-full h-screen bg-slate-900 flex justify-center items-center text-slate-100">
         {forecast ? (
-          forecast.sunrise
+          <Forecast data={forecast} />
         ) : (
           <SearchSection
             term={term}
