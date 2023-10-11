@@ -1,8 +1,8 @@
-import Forecast from "./components/Forecast";
-import SearchSection from "./components/SearchSection";
+import Forecast from "./components/Forecast/Forecast";
+import SearchSection from "./components/SearchSection/SearchSection";
 import useForecast from "./hooks/useForecast";
 
-function App() {
+export const App = () => {
   const { term, options, forecast, onInputChange, onOptionSelect, onSubmit } =
     useForecast();
   return (
@@ -22,6 +22,6 @@ function App() {
       </main>
     </>
   );
-}
+};
 
 export default App;

@@ -1,12 +1,12 @@
-import { optionType, Props } from "../types";
+import { optionType, Props } from "../../types";
 
-function SearchSection({
+const SearchSection = ({
   term,
   options,
   onInputChange,
   onOptionSelect,
   onSubmit,
-}: Props): JSX.Element {
+}: Props): JSX.Element => {
   return (
     <section
       className=" basis-full sm:basis-11/12 h-full rounded bg-slate-800 flex 
@@ -19,7 +19,7 @@ function SearchSection({
         Enter below a place you want to know the weather of and select an option
         from the dropdown
       </p>
-      <div className="relative flex mt-10 sm:mt-6">
+      <form className="relative flex mt-10 sm:mt-6">
         <input
           type="text"
           value={term}
@@ -44,9 +44,9 @@ function SearchSection({
         >
           Search
         </button>
-      </div>
+      </form>
     </section>
   );
-}
+};
 
 export default SearchSection;
