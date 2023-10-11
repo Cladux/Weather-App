@@ -9,6 +9,7 @@ const useForecast = () => {
   /*get personal APIkey from https://home.openweathermap.org/users/sign_up
     and replace on APIkey variable */
   const APIKey = import.meta.env.VITE_REACT_API_KEY;
+
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
     setTerm(value);
