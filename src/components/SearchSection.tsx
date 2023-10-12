@@ -21,6 +21,7 @@ function SearchSection({
       </p>
       <div className="relative flex mt-10 sm:mt-6">
         <input
+          placeholder="Search City"
           type="text"
           value={term}
           onChange={onInputChange}
