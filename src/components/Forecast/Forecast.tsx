@@ -1,12 +1,10 @@
 import Sunrise from "../../Icons/Sunrise";
 import Sunset from "../../Icons/Sunset";
 import { getSunTime } from "../../helpers";
-import { forecastType } from "../../types";
+import { forecastPropType } from "../../types";
 import Degree from "./Degree";
-type Props = {
-  data: forecastType;
-};
-const Forecast = ({ data }: Props): JSX.Element => {
+
+const Forecast = ({ data }: forecastPropType): JSX.Element => {
   const today = data.list[0];
   return (
     <section

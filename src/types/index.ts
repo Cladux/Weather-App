@@ -12,7 +12,9 @@ export type Props = {
   onOptionSelect: (option: optionType) => void;
   onSubmit: () => void;
 };
-
+export type forecastPropType = {
+  data: forecastType;
+};
 export type forecastType = {
   name: string;
   country: string;
