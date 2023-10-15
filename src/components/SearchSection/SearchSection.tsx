@@ -9,8 +9,8 @@ const SearchSection = ({
 }: Props): JSX.Element => {
   return (
     <section
-      className=" basis-full  sm:basis-11/12 h-full rounded bg-slate-800 flex 
-    justify-center items-center flex-col text-center max-w-screen-sm px-7 text-slate-200"
+      className="basis-full sm:basis-11/12 h-full rounded bg-slate-800 flex 
+    justify-center items-center flex-col text-center max-w-screen-sm px-7"
     >
       <h1 className="text-2xl font-light mb-2">
         <span className="font-black">Cladux</span> Weather

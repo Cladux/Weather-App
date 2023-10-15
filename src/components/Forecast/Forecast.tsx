@@ -15,8 +15,8 @@ const Forecast = ({ data }: forecastPropsType): JSX.Element => {
   const today = data.list[0];
   return (
     <section
-      className=" basis-full sm:basis-11/12 overflow-y-scroll rounded bg-slate-800 flex 
-  justify-center items-center flex-col text-center max-w-screen-sm px-7 text-slate-200"
+      className="basis-full sm:basis-11/12 h-min rounded bg-slate-800 flex 
+      justify-center items-center flex-col text-center max-w-screen-sm px-7 py-10"
     >
       <section className="forecast-section w-6/12 h-min">
         <h2 className="text-2xl font-black">
@@ -38,10 +38,10 @@ const Forecast = ({ data }: forecastPropsType): JSX.Element => {
           {data.list.map((item, i: number) => (
             <li
               key={i}
-              className="flex-shrink-0 inline-block text-center w-[50px]"
+              className="flex-shrink-0 inline-block text-center basis-10"
             >
               <p className="text-sm">
-                {i === 0 ? "now" : new Date(item.dt * 1000).getHours()}
+                {i === 0 ? "now" : `${new Date(item.dt * 1000).getHours()}:00`}
               </p>
               <img
                 src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
@@ -54,11 +54,11 @@ const Forecast = ({ data }: forecastPropsType): JSX.Element => {
           ))}
         </ul>
 
-        <section className="flex flex-wrap justify-between text-slate-200 m-y-10">
-          <div className="basis-[49%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
+        <section className="flex flex-wrap justify-between m-y-10">
+          <div className="basis-[48%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
             <Sunrise /> <span className="mt-2">{getSunTime(data.sunrise)}</span>
           </div>
-          <div className="basis-[49%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
+          <div className="basis-[48%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
             <Sunset /> <span className="mt-2">{getSunTime(data.sunset)}</span>
           </div>
           <Tile
