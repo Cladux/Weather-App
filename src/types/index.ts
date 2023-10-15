@@ -12,8 +12,21 @@ export type Props = {
   onOptionSelect: (option: optionType) => void;
   onSubmit: () => void;
 };
-export type forecastPropType = {
+export type forecastPropsType = {
   data: forecastType;
+};
+export type tilePropsType = {
+  icon:
+    | "Wind"
+    | "aTest"
+    | "Feels"
+    | "Humidity"
+    | "Visibility"
+    | "Pressure"
+    | "Pop";
+  title: string;
+  info: string | JSX.Element;
+  description: string;
 };
 export type forecastType = {
   name: string;
