@@ -15,19 +15,7 @@ export type Props = {
 export type forecastPropsType = {
   data: forecastType;
 };
-export type tilePropsType = {
-  icon:
-    | "Wind"
-    | "aTest"
-    | "Feels"
-    | "Humidity"
-    | "Visibility"
-    | "Pressure"
-    | "Pop";
-  title: string;
-  info: string | JSX.Element;
-  description: string;
-};
+
 export type forecastType = {
   name: string;
   country: string;

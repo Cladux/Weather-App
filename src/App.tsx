@@ -7,7 +7,7 @@ const App = () => {
     useForecast();
   return (
     <>
-      <main className="w-full h-screen bg-slate-900 flex justify-center items-center text-slate-100">
+      <main className="w-full h-[100vh] bg-slate-900 flex justify-center items-center text-slate-100">
         {forecast ? (
           <Forecast data={forecast} />
         ) : (

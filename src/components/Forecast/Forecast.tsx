@@ -1,17 +1,24 @@
-import Sunrise from "../../Icons/Sunrise";
-import Sunset from "../../Icons/Sunset";
-import { getSunTime } from "../../helpers";
+import Sunrise from "../Icons/Sunrise";
+import Sunset from "../Icons/Sunset";
+import {
+  getHumidityValue,
+  getPop,
+  getSunTime,
+  getVisibilityValue,
+  getWindDirection,
+} from "../../helpers";
 import { forecastPropsType } from "../../types";
 import Degree from "./Degree";
+import Tile from "./Tile";
 
 const Forecast = ({ data }: forecastPropsType): JSX.Element => {
   const today = data.list[0];
   return (
     <section
-      className=" basis-full sm:basis-11/12 h-full rounded bg-slate-800 flex 
+      className=" basis-full sm:basis-11/12 overflow-y-scroll rounded bg-slate-800 flex 
   justify-center items-center flex-col text-center max-w-screen-sm px-7 text-slate-200"
     >
-      <section className="forecast-section w-6/12">
+      <section className="forecast-section w-6/12 h-min">
         <h2 className="text-2xl font-black">
           {data.name}
           <span className="font-thin"> {data.country}</span>
@@ -47,13 +54,57 @@ const Forecast = ({ data }: forecastPropsType): JSX.Element => {
           ))}
         </ul>
 
-        <section className="flex justify-between text-slate-200 ">
-          <div className="w-[140px] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
+        <section className="flex flex-wrap justify-between text-slate-200 m-y-10">
+          <div className="basis-[49%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
             <Sunrise /> <span className="mt-2">{getSunTime(data.sunrise)}</span>
           </div>
-          <div className="w-[140px] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
+          <div className="basis-[49%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-lg rounded drop-shadow-lg py-4 mb-5">
             <Sunset /> <span className="mt-2">{getSunTime(data.sunset)}</span>
           </div>
+          <Tile
+            icon="wind"
+            title="Wind"
+            info={`${today.wind.speed}`}
+            description={`${getWindDirection(
+              Math.round(today.wind.deg)
+            )}, gusts ${today.wind.gust.toFixed(1)} km/h`}
+          />
+          <Tile
+            icon="feels"
+            title="Feels like"
+            info={<Degree temp={Math.round(today.main.feels_like)} />}
+            description={`Feels ${
+              Math.round(today.main.feels_like) < Math.round(today.main.temp)
+                ? "colder"
+                : "warmer"
+            }`}
+          />
+          <Tile
+            icon="humidity"
+            title="Humidity"
+            info={`${today.main.humidity} %`}
+            description={getHumidityValue(today.main.humidity)}
+          />
+          <Tile
+            icon="pop"
+            title="Precipitation"
+            info={`${Math.round(today.pop * 100)}%`}
+            description={`${getPop(today.pop)}, clouds at ${today.clouds.all}%`}
+          />
+          <Tile
+            icon="pressure"
+            title="Pressure"
+            info={`${today.main.pressure} hPa`}
+            description={` ${
+              Math.round(today.main.pressure) < 1013 ? "Lower" : "Higher"
+            } than standard`}
+          />
+          <Tile
+            icon="visibility"
+            title="Visibility"
+            info={`${(today.visibility / 1000).toFixed()} km`}
+            description={getVisibilityValue(today.visibility)}
+          />
         </section>
       </section>
     </section>
