@@ -7,9 +7,9 @@ const useForecast = () => {
   const [city, setCity] = useState<optionType | null>(null);
   const [forecast, setForecast] = useState<forecastType | null>(null);
 
+  // const APIKey = import.meta.env.VITE_REACT_API_KEY;
   // published API Key
-  // for get API Key: sign up in "https://openweathermap.org" => api => current weather Data => get free version
-  const APIKey = import.meta.env.VITE_REACT_API_KEY;
+  const APIKey = "2a9515e02d7fc6e3ba647d331a44b4b9";
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
