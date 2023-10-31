@@ -14,7 +14,7 @@ This is a weather project built using React and created with Vite. It allows use
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/weather-project.git
+git clone https://github.com/Cladux/Weather-App
 
 2. Navigate to the project directory:
 
