@@ -1,6 +1,6 @@
 # Weather Project
 
-This is a weather project built using React and created with Vite. It allows users to search for weather information of different locations.
+This is a weather mini project built using React and created with Vite. It allows users to search for weather information of different locations.
 
 ## Features
 
@@ -18,7 +18,7 @@ git clone https://github.com/Cladux/Weather-App
 
 2. Navigate to the project directory:
 
-cd weather-project
+cd Weather-app
 
 3. Install dependencies:
 
@@ -32,13 +32,13 @@ npm install
 
 3. Add the following line to the .env file, replacing YOUR_API_KEY with your actual API key:
 
-VITE_API_KEY=YOUR_API_KEY
+VITE_REACT_API_KEY=YOUR_API_KEY
 
 4. Start the development server:
 
 npm run dev
 
-5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
+5. Open your browser and visit [http://localhost:3000] to view the application.
 
 ## Deployment
 
@@ -50,7 +50,7 @@ This will generate an optimized and minified version of the application in the d
 
 ## Credits
 
-This project was created by [Your Name]. It uses the following technologies and libraries:
+This project was created by [Cladux]. It uses the following technologies and libraries:
 
 - React: [https://reactjs.org/](https://reactjs.org/)
 - Vite: [https://vitejs.dev/](https://vitejs.dev/)
