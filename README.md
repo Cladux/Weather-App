@@ -52,6 +52,7 @@ This will generate an optimized and minified version of the application in the d
 
 This project was created by [Cladux]. It uses the following technologies and libraries:
 
-- React: [https://reactjs.org/](https://reactjs.org/)
-- Vite: [https://vitejs.dev/](https://vitejs.dev/)
-- OpenWeatherMap API: [https://openweathermap.org/api](https://openweathermap.org/api)
+- React: (https://reactjs.org/)
+- Vite: (https://vitejs.dev/)
+- Tailwind: (https://tailsind.com/)
+- OpenWeatherMap API: (https://openweathermap.org/api)
