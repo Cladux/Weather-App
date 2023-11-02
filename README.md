@@ -54,5 +54,5 @@ This project was created by [Cladux]. It uses the following technologies and lib
 
 - React: (https://reactjs.org/)
 - Vite: (https://vitejs.dev/)
-- Tailwind: (https://tailsind.com/)
+- Tailwind: (https://tailwindcss.com/)
 - OpenWeatherMap API: (https://openweathermap.org/api)
