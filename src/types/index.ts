@@ -14,6 +14,7 @@ export type Props = {
 };
 export type forecastPropsType = {
   data: forecastType;
+  backBtn: () => void;
 };
 
 export type forecastType = {

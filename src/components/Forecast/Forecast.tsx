@@ -11,12 +11,12 @@ import { forecastPropsType } from "../../types";
 import Degree from "./Degree";
 import Tile from "./Tile";
 
-const Forecast = ({ data }: forecastPropsType): JSX.Element => {
+const Forecast = ({ data, backBtn }: forecastPropsType): JSX.Element => {
   const today = data.list[0];
   return (
     <section
       className="basis-full sm:basis-11/12 h-min rounded bg-slate-800 flex 
-      justify-center items-center flex-col text-center max-w-screen-sm px-7 py-10"
+      justify-center items-center flex-col text-center max-w-screen-sm px-7 py-10 pt-80"
     >
       <section className="forecast-section w-6/12 h-min">
         <h2 className="text-2xl font-black">
@@ -107,6 +107,12 @@ const Forecast = ({ data }: forecastPropsType): JSX.Element => {
           />
         </section>
       </section>
+      <div
+        className="text-decoration-line: underline cursor-pointer"
+        onClick={backBtn}
+      >
+        Back
+      </div>
     </section>
   );
 };

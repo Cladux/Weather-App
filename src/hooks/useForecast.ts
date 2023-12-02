@@ -55,6 +55,10 @@ const useForecast = () => {
         setForecast(forecastData);
       });
   };
+  const backBtn = () => {
+    setForecast(null);
+    setTerm("");
+  };
 
   return {
     term,
@@ -63,6 +67,7 @@ const useForecast = () => {
     onInputChange,
     onOptionSelect,
     onSubmit,
+    backBtn,
   };
 };
 export default useForecast;
